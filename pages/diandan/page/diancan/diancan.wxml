@@ -1,0 +1,68 @@
+<!--pages/diandan/diandan.wxml-->
+<!-- 左侧菜单 -->
+<view class="list-left-menu">
+  <view wx:for="{{listData}}" wx:key="unique" class="{{index==activeIndex?'list-left-menu-box-selected':'list-left-menu-box-unselect'}}" data-index="{{index}}" bindtap='selectMenu'>
+    <view class="list-menu-name">{{item.name}}</view>
+  </view>
+</view>
+<view>
+  <image class="list-right-menu" src="/pages/diandan/resources/pic/diandna-pic.jpg"></image>
+</view>
+<!-- 右侧菜单 -->
+<scroll-view class="scroll-view-t" scroll-y="true" style='height:{{scrollH}}rpx;' bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="content" id="a{{index}}" wx:for="{{listData}}" wx:key="unique">
+    <view class='list-tab'>{{item.name}}</view>
+    <view class='content-list' wx:for="{{item.foods}}" wx:key="unique" wx:for-item="items" wx:for-index="index">
+      <view class='list-image-box'>
+        <image class="list-image" mode="widthFix" src="/pages/image/naicha.png" lazy-load></image>
+      </view>
+      <view class='issue-name'>
+        <view>{{item.foods[index].name}}</view>
+        <view style='margin-top:20rpx;color:#824920'>
+          ¥ {{item.foods[index].price}}.00
+          <i class="iconfont icon-jiahao2fill plus-icon" data-type="{{index}}" data-index="{{indexs}}" bindtap="selectInfo"></i>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<!-- 底部操作菜单 -->
+<view class="operate-bar">
+  <view class='gouwuche'>
+    <view style='padding:5px;display:flex'>
+      <i class="iconfont icon-gouwuchefill gouwuche-icon {{sumMonney!=0?'activity-color':'' }}" bindtap="showCartList">
+        <span class="number-msg" wx:if="{{cartList.length!=0}}">{{cupNumber}}</span>
+      </i>
+
+      <view class='gouwuche-price' wx:if="{{sumMonney==0}}">¥ 0</view>
+      <view class='gouwuche-price' style='color:white;font-size:18px' wx:if="{{sumMonney!=0}}">¥ {{sumMonney}}.00</view>
+    </view>
+  </view>
+  <view class="submit-btn {{sumMonney!=0?'activity-color-bg':'' }}" bindtap='goBalance'>
+    <view class="submit-btn-label {{sumMonney!=0?'color-white':'' }}">去结算</view>
+  </view>
+</view>
+<!-- 选择弹窗 -->
+<view class="drawer_screen" bindtap="selectInfo" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view class="drawer_box_ad" wx:if="{{showModalStatus}}">
+  <view class="drawer_content_ad">
+  <view wx:for="{{listData}}" wx:key="unique">
+  <view style='font-size:16px;display:flex;justify-content:center;'> {{item.food[index]}} </view>
+  </view>
+    <view class="select-line-nav">规格</view>
+    <view style='display:flex'>
+      <view class="select-tab {{index==sizeIndex?'select-active':''}}" wx:for="{{size}}" wx:key="unique" data-type='0' data-index='{{index}}' bindtap='chooseSE'>{{item}}</view>
+    </view>
+    <view class="select-line-nav">糖度</view>
+    <view style='display:flex'>
+      <view class="select-tab {{index==sugarIndex?'select-active':''}}" wx:for="{{sugar}}" wx:key="unique" bindtap='chooseSE' data-type='1' data-index='{{index}}'>{{item}}</view>
+    </view>
+    <view class="select-line-nav">温度</view>
+    <view style='display:flex'>
+      <view class="select-tab {{index==temIndex?'select-active':''}}" wx:for="{{tem}}" wx:key="unique" bindtap='chooseSE' data-type='2' data-index='{{index}}'>{{item}}</view>
+    </view>
+    <view class="select-price">¥{{listData[currentType].foods[currentIndex].specfoods[0].price}}.00
+      <button class="btn-putIn" bindtap='addToCart'>加入购物车</button>
+    </view>
+  </view>
+</view>

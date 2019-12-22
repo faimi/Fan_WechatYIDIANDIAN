@@ -1,0 +1,42 @@
+/* pages/wode/wode.wxss */
+
+page {
+  background-color: #f0f1f2;
+}
+
+.wo-head {
+  background-color: white;
+  height: 226rpx;
+}
+
+.selectedIndex {
+  background-color: #3b8668;
+  color: white;
+}
+
+.unselectIndex {
+  background-color: #e3e4e5;
+  color: #2c2f32;
+}
+
+.com {
+  text-align: center;
+  padding: 44rpx;
+  width: 260rpx;
+}
+
+.com1 {
+  float: left;
+  margin: 33rpx 0rpx 33rpx 33rpx;
+}
+
+.com2 {
+  float: right;
+  margin: 33rpx 33rpx 33rpx 0rpx;
+}
+
+.containers {
+  padding-top: 341rpx;
+  margin-left: 304rpx;
+  color: #767a7f;
+}

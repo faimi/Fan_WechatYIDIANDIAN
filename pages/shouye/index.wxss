@@ -1,0 +1,41 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* 首页 */
+.btn {
+  background-color: #3b8668;
+  width: 140px;
+  height: 45px;
+  color: #ffffff;
+  margin-left: 13px;
+  margin-right: 13px;
+}
+.btn-s {
+  margin-top: 50px;
+}
+.btn-w {
+  margin-top: -53px;
+  float: right;
+}
+.image {
+  width: 100%;
+  height: 100%
+}

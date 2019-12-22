@@ -1,0 +1,13 @@
+<!--pages/wode/wode.wxml-->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <!-- <text class="userinfo-province">{{userInfo.province}}</text> -->
+    </block>
+  </view>
+  <view class="contain">
+  <view class="com">收货地址</view>
+  <view class="com">使用须知</view>
+  </view>

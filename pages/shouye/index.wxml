@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<image class="image" mode="widthFix" src="../shouye/resources/pic/shouye_head.jpg" />
+<view class="v-btn">
+  <navigator url="/pages/shouye/page/map_choose/map_choose" hover-class="navigator-hover">
+    <button class="btn btn-s">点餐</button>
+  </navigator>
+  <navigator url="../wode/index" hover-class="navigator-hover">
+    <button class="btn btn-w">外卖</button>
+  </navigator>
+
+</view>

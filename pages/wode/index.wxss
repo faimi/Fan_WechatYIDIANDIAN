@@ -1,0 +1,43 @@
+/* pages/wode/wode.wxss */
+
+page {
+  background-color: #f0f1f1;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 258rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 36rpx 0rpx 20rpx 0rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.userinfo-province {
+  color: #aaa;
+}
+
+.contain {
+  margin-top: 63rpx;
+}
+
+.com {
+  font-size: 36rpx;
+  height: 99rpx;
+  line-height: 99rpx;
+  background-color: white;
+  padding-left: 40px;
+  border-bottom: 1px solid #e3e4e5;
+  font-family: 黑体;
+  color: #000;
+}

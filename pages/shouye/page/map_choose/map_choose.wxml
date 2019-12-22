@@ -1,0 +1,8 @@
+<!--pages/shouye/page/map_choose/map_choose.wxml-->
+<view class="page-body">
+<block wx:if="{{hasLocation === true}}">
+  <text class="page-body-text">{{locationName}}</text>
+  <image class="image" src="/pages/shouye/resources/kind/dingwei.png" />
+</block>
+<button type="primary">选择位置</button>
+</view>

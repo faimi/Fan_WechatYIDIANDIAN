@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/shouye/index",
+    "pages/diandan/index",
+    "pages/wode/index",
+    "pages/shouye/page/map_choose/map_choose",
+    "pages/diandan/page/diancan/diancan"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "点餐小程序",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/shouye/index",
+        "iconPath": "pages/image/icon-shouye.png",
+        "selectedIconPath": "pages/image/icon-shouye-hl.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/diandan/index",
+        "iconPath": "pages/image/icon-diandan.png",
+        "selectedIconPath": "pages/image/icon-diandan-hl.png",
+        "text": "点单"
+      },
+      {
+        "pagePath": "pages/wode/index",
+        "iconPath": "pages/image/icon-wode.png",
+        "selectedIconPath": "pages/image/icon-wode-hl.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+/* pages/shouye/page/map_choose/map_choose.wxss */
+.image {
+  width: 20px;
+  height: 20px;
+}
